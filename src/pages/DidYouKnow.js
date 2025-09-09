@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // React Router Link
 import "../styles/DidYouKnow.css";
 
 function DidYouKnow() {
@@ -43,8 +44,7 @@ function DidYouKnow() {
       animal: "Ancient Friends 🏺",
       fact: "The oldest known pet cat was found in a 9,500-year-old grave in Cyprus — proving cats were domesticated long before ancient Egypt.",
     },
-
-    // 🔥 DoggyWorld Product Fun Facts
+    // DoggyWorld Product Fun Facts
     {
       animal: "DoggyWorld Treats 🍖",
       fact: "Fun Fact: Training a dog is 3x easier with high-value rewards! DoggyWorld’s natural training treats are designed to keep tails wagging while teaching new tricks.",
@@ -90,7 +90,7 @@ function DidYouKnow() {
       )
     ),
 
-    // Final promo
+    // Final promo section
     React.createElement(
       "div",
       { className: "promo-section" },
@@ -101,8 +101,8 @@ function DidYouKnow() {
         "From tasty treats to playful toys, DoggyWorld has everything to keep your furry friends healthy and happy. Don’t just learn fun facts — give your pets the best life possible!"
       ),
       React.createElement(
-        "a",
-        { href: "/products", className: "promo-button" },
+        Link,
+        { to: "/products", className: "promo-button" },
         "View Products"
       )
     )
