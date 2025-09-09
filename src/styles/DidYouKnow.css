@@ -1,3 +1,4 @@
+/* Page container */
 .didyouknow-page {
   padding: 2rem 1rem;
   font-family: 'Segoe UI', sans-serif;
@@ -38,6 +39,7 @@
   gap: 1.5rem;
   max-width: 1100px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
 /* Fun card styles */
@@ -53,6 +55,12 @@
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideIn 0.8s forwards;
+
+  /* Equal height magic */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
 }
 
 /* Staggered animation for cards */
@@ -95,6 +103,7 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: #333;
+  margin-top: auto;
 }
 
 /* Promo section */
@@ -150,6 +159,6 @@
 /* Responsive */
 @media (max-width: 768px) {
   .didyouknow-page h2 { font-size: 2rem; }
-  .fact-card { padding: 1.25rem; }
+  .fact-card { padding: 1.25rem; min-height: 260px; }
   .promo-section { padding: 1.5rem; }
 }

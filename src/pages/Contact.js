@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import "../styles/Contact.css";
 
 function Contact() {
@@ -17,6 +17,7 @@ function Contact() {
     <div className="contact-page">
       <h1>Contact DoggyWorld</h1>
 
+      {/* Address Card */}
       <FadeInCard>
         <div className="contact-card">
           <h2>📍 Address</h2>
@@ -24,6 +25,7 @@ function Contact() {
         </div>
       </FadeInCard>
 
+      {/* Trading Hours Card */}
       <FadeInCard>
         <div className="contact-card">
           <h2>🕒 Trading Hours</h2>
@@ -38,6 +40,7 @@ function Contact() {
         </div>
       </FadeInCard>
 
+      {/* Contact Info Card */}
       <FadeInCard>
         <div className="contact-card">
           <h2>☎ Contact Info</h2>
@@ -55,10 +58,6 @@ function Contact() {
               065 866 3137
             </a>
           </p>
-          <p>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:info@doggyworld.co.za">info@doggyworld.co.za</a>
-          </p>
         </div>
       </FadeInCard>
     </div>
@@ -68,9 +67,9 @@ function Contact() {
 /* Reusable fade-in wrapper */
 function FadeInCard({ children }) {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {

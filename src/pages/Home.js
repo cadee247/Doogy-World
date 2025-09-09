@@ -8,12 +8,12 @@ function Home() {
   const cards = [
     {
       title: "Dogs 🐕",
-      text: "We’ve got tails wagging and bowls brimming — your one-stop shop for every dog’s daily delight. From nutritious meals to tasty treats, we supply all your dog’s food needs with love, care, and a whole lot of tail-wagging joy.",
+      text: "We’ve got tails wagging and bowls brimming your one-stop shop for every dog’s daily delight. From nutritious meals to tasty treats, we supply all your dog’s food needs with love, care, and a whole lot of tail-wagging joy.",
       img: dogPic,
     },
     {
       title: "Cats 🐈",
-      text: "From curious kittens to regal loungers, we’ve got every feline covered. Nutritious meals, irresistible treats, and all the purr-worthy essentials — if your cat needs it, we supply it with care, quality, and a touch of whiskered charm.",
+      text: "From curious kittens to regal loungers, we’ve got every feline covered. Nutritious meals, irresistible treats, and all the purr-worthy essentials, if your cat needs it, we supply it with care, quality, and a touch of whiskered charm.",
       img: catPic,
     },
   ];
@@ -29,12 +29,7 @@ function Home() {
           loading="lazy"
         />
         <div className="banner-overlay">
-          <h1>Welcome to Doggy World 🐾</h1>
-          <p>
-            We supply <strong>all your needs for your furry friends</strong> —
-            food, toys, treats, and love. Every product is carefully selected
-            to keep your pets happy, healthy, and thriving.
-          </p>
+         
         </div>
       </LazyFadeSection>
 

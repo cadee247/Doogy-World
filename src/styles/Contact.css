@@ -1,44 +1,30 @@
+/* Contact Page */
 .contact-page {
   max-width: 600px;
   margin: 2rem auto;
   padding: 1rem 2rem;
   font-family: 'Segoe UI', sans-serif;
   color: #222;
-  background: #f5f7fa;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideIn 0.8s forwards;
 }
 
+/* Page Heading */
 .contact-page h1 {
   text-align: center;
   font-size: 2.2rem;
   color: #0d47a1;
   margin-bottom: 2rem;
   font-weight: 700;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideIn 0.8s forwards;
-  animation-delay: 0.2s;
 }
 
 /* Cards */
 .contact-card {
-  background: #e3f2fd; /* calm blue */
+  background: #e3f2fd;
   border-radius: 12px;
   padding: 1.8rem 2rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideIn 0.8s forwards;
 }
-
-/* Stagger cards */
-.contact-card:nth-child(1) { animation-delay: 0.3s; }
-.contact-card:nth-child(2) { animation-delay: 0.45s; }
-.contact-card:nth-child(3) { animation-delay: 0.6s; }
 
 .contact-card:hover {
   transform: translateY(-4px) scale(1.02);
@@ -61,11 +47,11 @@
   color: #0b3c91;
 }
 
-/* Store hours list */
+/* Store Hours List */
 .store-hours {
   list-style: none;
   padding: 0;
-  margin: 0.8rem 0 0 0;
+  margin-top: 0.8rem;
 }
 
 .store-hours li {
@@ -89,10 +75,51 @@
   color: #0b3c91;
 }
 
-/* FADE + SLIDE ANIMATION */
-@keyframes fadeSlideIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 1rem auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #0d47a1;
+}
+
+/* Success & Error Messages */
+.success-msg {
+  color: #4caf50;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-msg {
+  color: #f44336;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Responsive */

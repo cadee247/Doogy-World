@@ -1,12 +1,10 @@
-/* Footer.css */
-
 footer {
   background: linear-gradient(135deg, #0d47a1, #1976d2);
   color: #fff;
   padding: 1.8rem 1rem;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-  position: relative;
+  position: relative; /* stays in normal flow */
   overflow: hidden;
 }
 

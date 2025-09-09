@@ -4,7 +4,8 @@ function Footer() {
   return (
     <footer>
       <p>
-        <i className="fas fa-paw"></i> © {new Date().getFullYear()} Doggy World. All rights reserved.
+        {/* Using a unicode paw instead of Font Awesome to avoid missing icons */}
+        <span role="img" aria-label="paw">🐾</span> © {new Date().getFullYear()} Doggy World. All rights reserved.
       </p>
     </footer>
   );

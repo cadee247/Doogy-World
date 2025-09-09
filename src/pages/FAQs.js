@@ -34,7 +34,7 @@ function FAQs() {
     },
     {
       question: "Can I buy cat food here?",
-      answer: "Yes, we have a wide range of cat foods, treats, and accessories."
+      answer: "Yes,we do supply cat food."
     },
     {
       question: "Are your products premium quality?",
