@@ -133,16 +133,17 @@
   .banner-overlay p { font-size: 1rem; }
 
   /* Cards stack vertically, center all content */
+@media (max-width: 768px) {
   .card-section {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+    flex-direction: column !important; /* stack image + text vertically */
+    align-items: center !important;    /* center both horizontally */
+    text-align: center !important;     /* center text */
   }
 
-  /* Reset order for mobile so text is always below image */
+  /* Override left/right ordering */
   .card-section.left .card-image,
-  .card-section.right .card-image,
   .card-section.left .card-text,
+  .card-section.right .card-image,
   .card-section.right .card-text {
     order: 0 !important;
     width: 100% !important;
