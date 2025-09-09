@@ -1,0 +1,158 @@
+.faqs-page {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfdfd;
+  color: #222;
+}
+
+.faqs-page h2 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+.faqs-page .intro {
+  color: #555;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+  animation-delay: 0.2s;
+}
+
+.swiper-wrapper {
+  position: relative;
+}
+
+/* FAQ cards */
+.faq-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s forwards;
+}
+
+/* Staggered animation for multiple cards */
+.faq-card:nth-child(1) { animation-delay: 0.2s; }
+.faq-card:nth-child(2) { animation-delay: 0.35s; }
+.faq-card:nth-child(3) { animation-delay: 0.5s; }
+.faq-card:nth-child(4) { animation-delay: 0.65s; }
+
+.faq-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.faq-card h3 {
+  color: #1976d2;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: #f0f6ff;
+  border: 1px solid #d0e2ff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  color: #0d47a1;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .stars {
+  color: #ffb400;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-card .comment {
+  font-style: italic;
+  color: #444;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0d47a1;
+  background: rgba(13, 71, 161, 0.1);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.swiper-button-prev { left: -3rem; }
+.swiper-button-next { right: -3rem; }
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover { background: rgba(13, 71, 161, 0.2); }
+
+/* Pagination bullets */
+.swiper-pagination-bullet { background: #1976d2; }
+
+/* FADE + SLIDE ANIMATION */
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .swiper-button-prev { left: -2rem; }
+  .swiper-button-next { right: -2rem; }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 2rem;
+    height: 2rem;
+  }
+}

@@ -1,0 +1,14 @@
+:root {
+  --primary: #1976d2;   /* blue */
+  --secondary: #0d47a1; /* dark blue */
+  --light: #ffffff;
+  --dark: #333333;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  color: var(--dark);
+}

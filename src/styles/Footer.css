@@ -1,0 +1,59 @@
+/* Footer.css */
+
+footer {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #fff;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+footer p i {
+  font-style: normal; /* fallback if Font Awesome not loaded */
+  font-size: 1.2rem;
+  color: #ffd600;
+  animation: pawBounce 1.2s infinite;
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Paw bounce */
+@keyframes pawBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Footer hover gradient effect */
+footer:hover {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  transition: background 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer p i {
+    font-size: 1rem;
+  }
+}
