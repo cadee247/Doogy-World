@@ -54,42 +54,6 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-banner {
-    height: 50vh;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: auto; /* lets height adjust automatically */
-    object-fit: contain;
-    object-position: top center; /* keeps top of image visible */
-  }
-
-  .banner-overlay h1 { font-size: 2rem; }
-  .banner-overlay p { font-size: 1rem; }
-}
-
-@media (max-width: 480px) {
-  .hero-banner {
-    height: 45vh;
-  }
-
-  .banner-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: top center;
-  }
-
-  .banner-overlay h1 { font-size: 1.6rem; }
-  .banner-overlay p { font-size: 0.9rem; }
-}
-
-
-
-
 /* CARD SECTIONS */
 .card-section {
   display: flex;
@@ -164,23 +128,37 @@
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  /* Banner text resize */
   .banner-overlay h1 { font-size: 2rem; }
   .banner-overlay p { font-size: 1rem; }
 
+  /* Cards stack vertically, center all content */
   .card-section {
-    flex-direction: column;
-    align-items: center;  /* center both image & text */
-    text-align: center;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
-  .card-text, .card-image { order: 0; width: 100%; padding: 1rem 0; text-align: center; }
-  .card-image { justify-content: center; }
+  /* Reset order for mobile so text is always below image */
+  .card-section.left .card-image,
+  .card-section.right .card-image,
+  .card-section.left .card-text,
+  .card-section.right .card-text {
+    order: 0 !important;
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+    text-align: center !important;
+  }
+
+  .card-image { justify-content: center !important; }
   .card-image img { max-height: 300px; }
 }
 
 @media (max-width: 480px) {
+  .hero-banner { height: 45vh; }
   .banner-overlay h1 { font-size: 1.6rem; }
   .banner-overlay p { font-size: 0.9rem; }
-  .card-text { padding: 0.5rem 0; }
+
+  .card-text { padding: 0.5rem 0 !important; }
   .card-image img { max-height: 200px; }
 }
