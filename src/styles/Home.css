@@ -113,21 +113,27 @@
   .banner-overlay h1 { font-size: 2rem; }
   .banner-overlay p { font-size: 1rem; }
 
+  /* Force vertical stacking and centered content */
   .card-section {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;   /* center content horizontally */
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Reset order for mobile so text is always below image */
+  .card-text, .card-image {
+    order: 0 !important;
   }
 
   .card-text {
-    width: 100%;
-    text-align: center;    /* center text */
-    padding: 1rem 0;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 1rem 0 !important;
   }
 
   .card-image {
-    width: 100%;
-    justify-content: center; /* ensure image is centered */
+    width: 100% !important;
+    justify-content: center !important;
   }
 
   .card-image img { max-height: 300px; }
@@ -138,6 +144,6 @@
   .banner-overlay h1 { font-size: 1.6rem; }
   .banner-overlay p { font-size: 0.9rem; }
 
-  .card-text { padding: 0.5rem 0; }
+  .card-text { padding: 0.5rem 0 !important; }
   .card-image img { max-height: 200px; }
 }
